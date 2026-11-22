@@ -5,7 +5,7 @@
 
 Volume control;
 
-Whole playlist/ one track repeat;
+Whole playlist/one track repeat;
 
 Shuffle;
 
