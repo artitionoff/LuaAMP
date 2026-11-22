@@ -40,11 +40,11 @@ Recommended values: 1 or more.
 
 **TICK** - refresh rate of the UI.
 
-**VIS_TICK** - refresh rate of the UI while using visualiser.
+**VIS_TICK** - refresh rate of the UI while using visualizer.
 
 Bigger values - less frames per second on the monitor. Both **TICK** and **VIS_TICK** cannot go below 0.05 (=20 fps).
 
-**VIS_OFFSET** - number of seconds that shift the visualiser bars.
+**VIS_OFFSET** - number of seconds that shift the visualizer bars.
 
 If your visual data isn't synced with the audio, you can change this setting until you find the right latency.
 
@@ -52,7 +52,7 @@ If your visual data isn't synced with the audio, you can change this setting unt
 
 **MAX_SEND** - maximum size of a .wav or .ogg file in bytes that can be sent to the speakers as a whole.
 
-The usual value is 8 MB since it's the maximum limit for speakWav/speakOgg. .ogg files with sizes above 8 MB will not work. However, .wav files are sent in parts with 8 MB or less. You may expirience a pause between parts but the output will still be synced with the visualiser.
+The usual value is 8 MB since it's the maximum limit for speakWav/speakOgg. .ogg files with sizes above 8 MB will not work. However, .wav files are sent in parts with 8 MB or less. You may expirience a pause between parts but the output will still be synced with the visualizer.
 
 **CHUNK_BYTES** - maximum size of a part for a .wav file in bytes.
 
