@@ -58,35 +58,65 @@ Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 # File structure
 
 ├── player.lua - Your client, you only need to run this. The rest gets connected automatically
+
 ├── lib/
+
 │   ├── config.lua
+
 │   ├── state.lua
+
 │   ├── speaker.lua
+
 │   ├── util.lua
+
 │   ├── audio.lua
+
 │   ├── meta.lua
+
 │   ├── library.lua
+
 │   ├── queue.lua
+
 │   ├── playback.lua
+
 │   ├── lists.lua
+
 │   ├── search.lua
+
 │   ├── actions.lua
+
 │   ├── theme.lua
+
 │   ├── cover.lua
+
 │   ├── visual.lua
+
 │   ├── eq.lua
+
 │   ├── ui.lua
+
 │   └── targets.lua
+
 ├── mem/ - Memory module 1
+
 │   └── music/
+
 │       ├── Artist - Title.ogg / .wav
+
 │       ├── Artist - Title.vis
+
 │       └── Artist - Title.cov
+
 └── mem2/ - Memory module 2
+
     └── playlists/
+    
         ├── <name>.pl
+        
         ├── meta.cache
+        
         ├── theme.cfg
+        
         └── eq.cfg
 
 # Documentation
