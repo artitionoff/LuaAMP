@@ -57,8 +57,7 @@ Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 
 # Documentation
 
-For more detailed information about LuaAMP, its configuration, features, and additional tools, please refer to the docs folder in this repository. If you have any questions, feel free to DM us on Discord (@artition_off or @msi_gtx1050ti
-) or open an Issue in this repository. Feedback is truly appriciated!
+For more detailed information about LuaAMP, its configuration, features, and additional tools, please refer to the docs folder in this repository. If you have any questions, feel free to DM us on Discord (@artition_off or @msi_gtx1050ti) or open an Issue in this repository. Feedback is truly appriciated!
 
 # Project status
 
