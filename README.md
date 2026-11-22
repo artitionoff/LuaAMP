@@ -55,7 +55,7 @@ Make covers and visual (optional). Use makevis.py and makecov.py to make covers 
 
 Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 
-## File structure
+## File structure in your CC:CE computer
 ```text
 ├── player.lua - Your client, you only need to run this. The rest gets connected automatically.
 ├── lib/
