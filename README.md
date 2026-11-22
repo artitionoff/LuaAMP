@@ -55,6 +55,40 @@ Make covers and visual (optional). Use makevis.py and makecov.py to make covers 
 
 Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 
+# File structure
+
+├── player.lua - Your client, you only need to run this. The rest gets connected automatically
+├── lib/
+│   ├── config.lua
+│   ├── state.lua
+│   ├── speaker.lua
+│   ├── util.lua
+│   ├── audio.lua
+│   ├── meta.lua
+│   ├── library.lua
+│   ├── queue.lua
+│   ├── playback.lua
+│   ├── lists.lua
+│   ├── search.lua
+│   ├── actions.lua
+│   ├── theme.lua
+│   ├── cover.lua
+│   ├── visual.lua
+│   ├── eq.lua
+│   ├── ui.lua
+│   └── targets.lua
+├── mem/ - Memory module 1
+│   └── music/
+│       ├── Artist - Title.ogg / .wav
+│       ├── Artist - Title.vis
+│       └── Artist - Title.cov
+└── mem2/ - Memory module 2
+    └── playlists/
+        ├── <name>.pl
+        ├── meta.cache
+        ├── theme.cfg
+        └── eq.cfg
+
 # Documentation
 
 For more detailed information about LuaAMP, its configuration, features, and additional tools, please refer to the docs folder in this repository. If you have any questions, feel free to DM us on Discord (@artition_off or @msi_gtx1050ti) or open an Issue in this repository. Feedback is truly appriciated!
