@@ -1,7 +1,7 @@
 # LuaAMP (Lua Advanced Music Player)
 **🟩 LuaAMP** is a CC:CE audio player program which gives you the most advanced and immersive experience of your .wav and .ogg music. This program has all kinds of features you need packed in one convenient imterface! 🎶
 
-# Features:
+## Features:
 
 Volume control;
 
@@ -16,19 +16,19 @@ Playlists — use the Lists button to open a playlists menu. There you can make 
 Audio visualizer — use the Vis button to open a visualizer. Works with .wav files natively, or you can make an advanced visualiser for .wav and .ogg using makevis.py (see Functions featuring Python;
 18 different UI themes — use the Theme button in the Lists menu to switch the light/dark theme or change an accent color. 
 
-# Functions featuring Python:
+## Functions featuring Python:
 
 Advanced audio player — use makevis.py to make .vis files for your tracks. This file makes better visual data for your audiofiles. 
 
 Album covers — use makecov.py to make .cov files, which contains the covers from your tracks obtained from their metadata. Covers will be displayed in the main menu. 
 
-# Experimental features:
+## Experimental features:
 
 Equalizer — use the EQ button in player or playlists menu to open the equalizer menu. You can either choose the built-in presets or set your own values. **It works only with .wav files and parts will be every 8 seconds instead of every 8 MB (~45 seconds). Use this feature on your own risk.**
 
 # Installation and setup:
 
-**Requirements**:
+## Requirements:
 
 CC:CE PC/Computer module;
 
@@ -40,7 +40,7 @@ Python with NumPy, Pillow and SoundFile libraries (optional).
 
 **If you want to customize LuaAMP to your setup, see *config.md* in docs.**
 
-# Installation:
+## Installation:
 
 Download thr latest LuaAMP.zip in releases. Download the archive and unpack it on your CC:CE PC. 
 
@@ -55,75 +55,46 @@ Make covers and visual (optional). Use makevis.py and makecov.py to make covers 
 
 Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 
-# File structure
-
-├── player.lua - Your client, you only need to run this. The rest gets connected automatically
-
+## File structure
+```text
+├── player.lua - Your client, you only need to run this. The rest gets connected automatically.
 ├── lib/
-
 │   ├── config.lua
-
 │   ├── state.lua
-
 │   ├── speaker.lua
-
 │   ├── util.lua
-
 │   ├── audio.lua
-
 │   ├── meta.lua
-
 │   ├── library.lua
-
 │   ├── queue.lua
-
 │   ├── playback.lua
-
 │   ├── lists.lua
-
 │   ├── search.lua
-
 │   ├── actions.lua
-
 │   ├── theme.lua
-
 │   ├── cover.lua
-
 │   ├── visual.lua
-
 │   ├── eq.lua
-
 │   ├── ui.lua
-
 │   └── targets.lua
-
 ├── mem/ - Memory module 1
-
 │   └── music/
-
 │       ├── Artist - Title.ogg / .wav
-
 │       ├── Artist - Title.vis
-
 │       └── Artist - Title.cov
-
 └── mem2/ - Memory module 2
-
     └── playlists/
-    
         ├── <name>.pl
-        
         ├── meta.cache
-        
         ├── theme.cfg
-        
         └── eq.cfg
+```
 
-# Documentation
+## Documentation
 
 For more detailed information about LuaAMP, its configuration, features, and additional tools, please refer to the docs folder in this repository. If you have any questions, feel free to DM us on Discord (@artition_off or @msi_gtx1050ti) or open an Issue in this repository. Feedback is truly appriciated!
 
-# Project status
+## Project status
 
 LuaAMP is an actively developed project. Some features, including the audio equalizer, are experimental and may change in future updates.
 
