@@ -97,6 +97,6 @@ For more detailed information about LuaAMP, its configuration, features, and add
 
 ## Project status
 
-LuaAMP is an actively developed project. Some features, including the audio equalizer, are experimental and may change in future updates.
+LuaAMP is an active developing project. Some features, including the audio equalizer, are experimental and may change in future updates.
 
 ***Contains AI-generated code.***
