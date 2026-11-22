@@ -1,20 +1,35 @@
-# Customizing config.lua for your setup.
+# Customizing *config.lua* for your setup.
 
 If you want to connect your speakers to a different pin, change the offset of the visualizer or just mess around with the settings, you can edit *config.lua* in *lib*.
 
-**SPEAKER_ID** - the id of your signal pin where the speakers are connected (1-10)
+# Speaker ID
 
-If you have a speaker on the Signal N (whatever number it is) instead of Signal 10, you can simply change this value to N: ***SPEAKER_ID*** *= N*
+**SPEAKER_ID** - the id of your signal pin where the speakers are connected (1-10).
 
+If you have a speaker on the Signal N (whatever number it is) instead of Signal 10, you can simply change this value to N: ***SPEAKER_ID*** *= N*.
 
-**MUSIC_DIR** - path to your music folder in CC itself
+# Directories
 
-**LIST_DIR** - path to your playlists folder
+**MUSIC_DIR** - path to your music folder in CC itself.
+
+**LIST_DIR** - path to your playlists folder.
 
 If you don't want to hold a server rig for your music and playlists, you can simply change the path to something else. For example, ***MUSIC_DIR*** *= "rom/music"* or ***LIST_DIR*** *= "cee/something/playlists"*. However, be ready to encounter memory limits if you decide to host everything on the computer.
 
+# Volume
 
-**START_VOLUME** - the default value of the volume that is used after the start of the program
+**START_VOLUME** - the default value of the volume that is used after the start of the program.
 
 The recommended values for this setting are 0.5-1.0 since speaker volume doesn't increase after 1.
 
+**VOL_STEP** - value of the volume step.
+
+Recommended values: 0.05 or 0.1.
+
+**VOL_MIN** - minimum volume value.
+
+Cannot go below 0.
+
+**VOL_MAX** - maximum volume value.
+
+Recommended values: 1 or more.
