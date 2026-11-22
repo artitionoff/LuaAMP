@@ -1,6 +1,6 @@
 # Customizing *config.lua* for your setup.
 
-If you want to connect your speakers to a different pin, change the offset of the visualiser or just mess around with the settings, you can edit *config.lua* in *lib*.
+If you want to connect your speakers to a different pin, change the offset of the visualizer or just mess around with the settings, you can edit *config.lua* in *lib*.
 
 ## Speaker ID
 
