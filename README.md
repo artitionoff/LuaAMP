@@ -1,7 +1,4 @@
-# LuaAMP
-An Advanced music player for your ComputerCraft: Computer Energetics computers.
-
-LuaAMP (Lua Advanced Music Player)
+# LuaAMP (Lua Advanced Music Player)
 🟩 LuaAMP is a CC:CE audio player program which gives you the most advanced and immersive experience of your .wav and .ogg music. This programm has all the kinds of features you need packed in one convenient imterface! 🎶
 
 Features:
