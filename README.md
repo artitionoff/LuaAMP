@@ -13,7 +13,10 @@ Track searching;
 
 Playlists — use the Lists button to open a playlists menu. There you can make and edit your own playlists;
 
-Audio visualizer — use the Vis button to open a visualizer. Works with .wav files natively, or you can make an advanced visualiser for .wav and .ogg using makevis.py (see Functions featuring Python;
+Track rewinding — click the **<<** **>>** in the UI or press **[** **]** on your keyboard. You can also click on the track bar to rewind the track;
+
+Audio visualizer — use the Vis button to open a visualizer. Works with .wav files natively, or you can make an advanced visualiser for .wav and .ogg using makevis.py (see Functions featuring Python);
+
 18 different UI themes — use the Theme button in the Lists menu to switch the light/dark theme or change an accent color. 
 
 ## Functions featuring Python:
@@ -21,6 +24,8 @@ Audio visualizer — use the Vis button to open a visualizer. Works with .wav fi
 Advanced audio player — use makevis.py to make .vis files for your tracks. This file makes better visual data for your audiofiles. 
 
 Album covers — use makecov.py to make .cov files, which contains the covers from your tracks obtained from their metadata. Covers will be displayed in the main menu. 
+
+Adaptive themes — themes can adapt to the album covers of your track. 
 
 ## Experimental features:
 
