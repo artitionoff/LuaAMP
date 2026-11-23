@@ -24,7 +24,7 @@ Album covers — use makecov.py to make .cov files, which contains the covers fr
 
 ## Experimental features:
 
-Equalizer — use the EQ button in player or playlists menu to open the equalizer menu. You can either choose the built-in presets or set your own values. **It works only with .wav files and parts will be every 8 seconds instead of every 8 MB (~45 seconds). Use this feature on your own risk.**
+Equalizer — use the EQ button in player or playlists menu to open the equalizer menu. You can either choose the built-in presets or set your own values. **Before using it, please run *eqbench.lua*. If the bench shows a result of > 1.3x, you can use the equalizer. It works only with .wav files and parts will be every 8 seconds instead of every 8 MB (~45 seconds). Use this feature on your own risk.**
 
 # Installation and setup:
 
@@ -58,6 +58,7 @@ Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 ## File structure in your CC:CE computer
 ```text
 ├── player.lua - Your client, you only need to run this. The rest gets connected automatically.
+├── eqbench.lua (only in v1.0)
 ├── lib/
 │   ├── config.lua
 │   ├── state.lua
@@ -74,7 +75,7 @@ Run LuaAMP. Launch the player on your CC:CE PC using player.lua.
 │   ├── theme.lua
 │   ├── cover.lua
 │   ├── visual.lua
-│   ├── eq.lua
+│   ├── eq.lua (v1.0)
 │   ├── ui.lua
 │   └── targets.lua
 ├── mem/ - Memory module 1
@@ -96,6 +97,6 @@ For more detailed information about LuaAMP, its configuration, features, and add
 
 ## Project status
 
-LuaAMP is an actively developed project. Some features, including the audio equalizer, are experimental and may change in future updates.
+LuaAMP is an active developing project. Some features, including the audio equalizer, are experimental and may change in future updates.
 
 ***Contains AI-generated code.***
