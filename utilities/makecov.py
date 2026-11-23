@@ -10,7 +10,9 @@ read directly; ffmpeg (optional) is only a fallback for other files (m4a ...). W
 Copy the .cov files next to the tracks in the game (e.g. mem/music).
 """
 import base64
+import colorsys
 import io
+import math
 import os
 import struct
 import subprocess
@@ -291,6 +293,38 @@ def dither(img, pal):
     return out
 
 
+def cover_accent(img):
+    """dominant tint of the whole picture -> (r, g, b), or None for a really gray picture.
+    Every pixel votes for its hue with weight saturation*brightness, so a big pale-blue area
+    beats a small vivid spot, and a faint cast over a white cover still counts."""
+    BINS = 24
+    wsum, ssum, vx, vy = [0.0] * BINS, [0.0] * BINS, [0.0] * BINS, [0.0] * BINS
+    total = 0.0
+    small = img.convert('RGB').resize((96, 96))
+    px = list(small.get_flattened_data() if hasattr(small, 'get_flattened_data') else small.getdata())
+    for r, g, b in px:
+        h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+        if v < 0.2 or s < 0.02:
+            continue
+        w = s * v
+        k = int(h * BINS) % BINS
+        wsum[k] += w
+        ssum[k] += w * s
+        vx[k] += w * math.cos(h * 2 * math.pi)
+        vy[k] += w * math.sin(h * 2 * math.pi)
+        total += w
+    if total < len(px) * 0.006:                 # average chroma under 0.6 %: gray
+        return None
+    smooth = [wsum[(k - 1) % BINS] + wsum[k] + wsum[(k + 1) % BINS] for k in range(BINS)]
+    peak = max(range(BINS), key=lambda k: smooth[k])
+    ks = [(peak - 1) % BINS, peak, (peak + 1) % BINS]
+    h = (math.atan2(sum(vy[k] for k in ks), sum(vx[k] for k in ks)) / (2 * math.pi)) % 1.0
+    w = sum(wsum[k] for k in ks)
+    s = sum(ssum[k] for k in ks) / w
+    r, g, b = colorsys.hsv_to_rgb(h, min(1.0, max(s * 1.2 + 0.08, 0.45)), 0.9)
+    return int(r * 255 + 0.5), int(g * 255 + 0.5), int(b * 255 + 0.5)
+
+
 def dist(pal, a, b):
     return sum((pal[a][c] - pal[b][c]) ** 2 for c in range(3))
 
@@ -348,9 +382,12 @@ def make(path, force):
     data = b'COV1' + bytes([NCOL]) + b''.join(bytes(c) for c in pal) + bytes([len(SIZES)])
     for cw, ch in SIZES:
         data += encode_size(img, pal, cw, ch)
+    acc = cover_accent(img)                       # flag 1 + rgb = accent, flag 0 = gray picture
+    data += b'ACC1' + (bytes([1, *acc]) if acc else bytes([0, 0, 0, 0]))
     with open(out, 'wb') as f:
         f.write(data)
-    print('wrote  ', out, '(%d bytes)' % len(data))
+    print('wrote  ', out, '(%d bytes)' % len(data),
+          'accent #%02X%02X%02X' % acc if acc else 'gray, no accent')
 
 
 def safe_make(path, force):
